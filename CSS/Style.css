@@ -14,10 +14,11 @@ body{
 .contengrid{
     display: grid;
     grid-template-columns:repeat(3, 1fr);
-    grid-template-rows:repeat(9, 1fr);
+    grid-template-rows:auto;
     gap:5px;
     margin: auto;
     width:1000px;
+    grid-auto-rows: minmax(40px);
 }
 
 .contengrid .encabezado{
@@ -25,7 +26,17 @@ body{
     grid-column-start:1;
     grid-column-end:4;
     grid-row:1 / 2;
-    background-color: aqua;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding:20px;
+    font-size: 25px;
+    font-family:sans-serif, 'Franklin Gothic Medium',
+    'Arial Narrow', Arial, sans-serif;
+    border-radius:10px;
+    color:white;
+    background-color:rgb(0, 0, 0);
+
 }
 
 .contengrid .cuerpo{
@@ -33,13 +44,26 @@ body{
     grid-column:1 / 4;
     grid-row: 2 / 3;
     background-color:orange;
+    padding:7px;
+}
+.cuerpo img{
+    width:200px;
+    height:auto;
+    float:left;
+    padding:5px 5px 0px 5px;
 }
 
-.contengrid .Sencabezado{
+.contengrid .Sencabezado2{
     background-color:blueviolet;
-    grid-area:Sencabezado;
+    grid-area:Sencabezado2;
     grid-column:1 / 4;
     grid-row:4/ 5;
+    padding:20px;
+    text-align: center;
+    font-size:25px;
+    font-family:sans-serif, 'Franklin Gothic Medium',
+    'Arial Narrow', Arial, sans-serif;
+
 }
 
 .contengrid .cuerpo2{
@@ -49,19 +73,33 @@ body{
     grid-row: 5 / 8;
 
  }
+.cuerpo2 img{
+    width:200px;
+    height:auto;
+    float:left;
+    padding:5px 5px 0px 5px;
+}
 
 .contengrid .anuncio{
     background-color:green;
     grid-area:anuncio;
     grid-column:3 / 4;
     grid-row: 5 / 8;
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+    flex-direction: column;
 
-
- }
+}
+.anuncio img{
+    width:320px;
+}
 
 .contengrid .pies{
     background-color:Red;
     grid-area:pies;
     grid-column:1 / 4;
     grid-row:8 / 9;
+    padding:30px;
+    font-size:20px;
 }
