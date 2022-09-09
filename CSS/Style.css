@@ -9,6 +9,10 @@ body{
     background-color: white;
     width:1000;
     margin: auto;
+    text-align: center;
+    padding:10px;
+    font-size:30px;
+    text-shadow: 1px 2px 4px #000;
 }
 
 .contengrid{
@@ -26,9 +30,8 @@ body{
     grid-column-start:1;
     grid-column-end:4;
     grid-row:1 / 2;
-    display: flex;
-    justify-content:center;
-    align-items: center;
+    text-align: center;
+    text-transform:uppercase;
     padding:20px;
     font-size: 25px;
     font-family:sans-serif, 'Franklin Gothic Medium',
@@ -45,6 +48,7 @@ body{
     grid-row: 2 / 3;
     background-color:orange;
     padding:7px;
+    text-transform: capitalize;
 }
 .cuerpo img{
     width:200px;
@@ -63,6 +67,7 @@ body{
     font-size:25px;
     font-family:sans-serif, 'Franklin Gothic Medium',
     'Arial Narrow', Arial, sans-serif;
+    text-transform:uppercase;
 
 }
 
@@ -79,6 +84,14 @@ body{
     float:left;
     padding:5px 5px 0px 5px;
 }
+.cuerpo2 img:hover{
+    width:190px;
+    transition:200ms;
+    border: #000 solid 5px;
+    cursor:pointer;
+    padding:5px;
+
+}
 
 .contengrid .anuncio{
     background-color:green;
@@ -93,6 +106,14 @@ body{
 }
 .anuncio img{
     width:320px;
+    transition:400ms;
+}
+.anuncio img:hover{
+    width: 315px;
+    transition:200ms;
+    border: #000 solid 5px;
+    cursor:pointer;
+
 }
 
 .contengrid .pies{
@@ -102,4 +123,59 @@ body{
     grid-row:8 / 9;
     padding:30px;
     font-size:20px;
+    margin:10px 0 0 0;
+}
+
+.Imagenes{
+    width:200px;
+    height: auto;
+}
+
+.Gimagenes{
+    margin: auto;
+    background-color: aqua;
+    border: #000 solid 5px;
+    width:1000px;
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap:10px;
+}
+.Gimagenes div {
+    border: #000 solid 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    padding: 10px;
+}
+div .img1{
+    filter: blur(5px);
+}
+div .img2{
+    filter: brightness(50%);
+}
+div .img3 {
+    filter: contrast(50%);
+}
+div .img4{
+    filter:drop-shadow(16px 16px 10px black);
+}
+div .img5{
+    filter:grayscale(90%);
+}
+div .img6{
+    filter:hue-rotate(50deg);
+}
+div .img7{
+    filter:invert(100%);
+}
+div .img8{
+    filter:opacity(40%);
+}
+div .img9{
+    filter:saturate(20%);
+}
+div .img10{
+    filter:sepia(100%);
 }
